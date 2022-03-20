@@ -17,6 +17,20 @@ namespace thuchanh_1602_22
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new fReportViewer());
+            /*Application.Run(new fKhachHang());*/
+        }
+        
+        // Tìm form đang mở theo tên
+        public static Form FindOpenedForm(string name)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    return f;
+                }
+            }
+            return null;
         }
     }
 }

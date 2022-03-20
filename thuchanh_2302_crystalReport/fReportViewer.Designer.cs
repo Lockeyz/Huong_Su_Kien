@@ -42,14 +42,15 @@ namespace thuchanh_2302_crystalReport
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.fBaoCao_Load);
             // 
-            // fBaoCao
+            // fReportViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "fBaoCao";
+            this.Name = "fReportViewer";
             this.Text = "Báo cáo";
             this.Load += new System.EventHandler(this.fBaoCao_Load);
             this.ResumeLayout(false);

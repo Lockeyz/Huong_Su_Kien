@@ -39,7 +39,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSkip = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnSkip);
             this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnReport);
             this.panel1.Controls.Add(this.btnEnter);
             this.panel1.Controls.Add(this.txbPhoneNumber);
             this.panel1.Controls.Add(this.label7);
@@ -176,14 +176,15 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // button3
+            // btnReport
             // 
-            this.button3.Location = new System.Drawing.Point(632, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Báo cáo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnReport.Location = new System.Drawing.Point(632, 155);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(75, 23);
+            this.btnReport.TabIndex = 15;
+            this.btnReport.Text = "Báo cáo";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnEnter
             // 
@@ -313,7 +314,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSkip;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.TextBox txbPhoneNumber;
         private System.Windows.Forms.Label label7;

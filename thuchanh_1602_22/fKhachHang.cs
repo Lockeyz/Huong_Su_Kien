@@ -212,5 +212,30 @@ namespace thuchanh_1602_22
 
             hienKhachHang(filter);
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            string filter = "{tblKhachhang.PK_iKhachhangID}>0 ";
+            if (!string.IsNullOrEmpty(txbName.Text.Trim()))
+            {
+                filter += string.Format(" AND {1} LIKE '*{0}*'"
+                    , txbName.Text
+                    , "{tblKhachhang.sHoten}");
+            }
+            if (!string.IsNullOrEmpty(txbPhoneNumber.Text.Trim()))
+            {
+                filter += string.Format(" AND {1} LIKE '*{0}*'"
+                    , txbPhoneNumber.Text
+                    , "{tblKhachhang.sDienthoai}");
+            }
+
+            // Hiển thị Report
+            fReportViewer reportViewerForm = new fReportViewer();
+            reportViewerForm.Show();
+            reportViewerForm.ShowReport("KhachHang.rpt"
+                , filter
+                , "Danh sách khách hàng");
+            reportViewerForm.Activate();
+        }
     }
 }

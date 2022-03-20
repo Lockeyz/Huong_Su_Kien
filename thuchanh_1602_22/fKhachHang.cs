@@ -215,7 +215,7 @@ namespace thuchanh_1602_22
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            string filter = "{tblKhachhang.PK_iKhachhangID}>0 ";
+            string filter = "{tblKhachhang.PK_iKhachhangID}>0";
             if (!string.IsNullOrEmpty(txbName.Text.Trim()))
             {
                 filter += string.Format(" AND {1} LIKE '*{0}*'"

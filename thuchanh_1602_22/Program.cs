@@ -16,8 +16,8 @@ namespace thuchanh_1602_22
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fReportViewer());
-            /*Application.Run(new fKhachHang());*/
+            /*Application.Run(new fReportViewer());*/
+            Application.Run(new fKhachHang());
         }
         
         // Tìm form đang mở theo tên

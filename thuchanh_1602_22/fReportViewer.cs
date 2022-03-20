@@ -21,15 +21,14 @@ namespace thuchanh_1602_22
 
         private void fReportViewer_Load(object sender, EventArgs e)
         {
-            ShowReport();
         }
 
         /*public void ShowReport(string reportFileName, string reportFilter="", string reportTitle="")*/
-        public void ShowReport()
+        public void ShowReport(string reportFileName, string reportFilter="", string reportTitle="")
         {
             // 1. Nạp Report
             ReportDocument rpt = new ReportDocument();
-            string path = string.Format("{0}\\Report\\KhachHang.rpt", Application.StartupPath);
+            string path = string.Format("{0}\\Report\\{1}", Application.StartupPath, reportFileName);
             rpt.Load(path);
 
             // 2. Cập nhật nguồn dữ liệu
@@ -45,17 +44,17 @@ namespace thuchanh_1602_22
             }
             // 3.
             // Gán cứng:
-            rpt.RecordSelectionFormula = "YEAR({tblKhachhang.tNgaysinh})>=1990";
-            rpt.SummaryInfo.ReportTitle = "DEMO_2302";
+            /*rpt.RecordSelectionFormula = "YEAR({tblKhachhang.tNgaysinh})>=1990";
+            rpt.SummaryInfo.ReportTitle = "DEMO_2302";*/
 
-            /*if (!string.IsNullOrEmpty(reportFilter))
+            if (!string.IsNullOrEmpty(reportFilter))
             {
                 rpt.RecordSelectionFormula = reportFilter;
             }
             if (!string.IsNullOrEmpty(reportTitle))
             {
-                rpt.RecordSelectionFormula = reportTitle;
-            }*/
+                rpt.SummaryInfo.ReportTitle = reportTitle;
+            }
 
             // 4. Hiển thị
             crystalReportViewer1.ReportSource = rpt;

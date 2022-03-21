@@ -20,7 +20,7 @@ namespace thuchanh_1602_22
             Application.Run(new fKhachHang());
         }
         
-        // Tìm form đang mở theo tên
+        // Tìm form đang đã mở theo tên
         public static Form FindOpenedForm(string name)
         {
             foreach (Form f in Application.OpenForms)

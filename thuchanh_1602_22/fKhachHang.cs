@@ -230,7 +230,11 @@ namespace thuchanh_1602_22
             }
 
             // Hiển thị Report
-            fReportViewer reportViewerForm = new fReportViewer();
+            fReportViewer reportViewerForm = (fReportViewer)Program.FindOpenedForm("fReportViewer");
+            if (reportViewerForm == null)
+            {
+                reportViewerForm = new fReportViewer();
+            }    
             reportViewerForm.Show();
             reportViewerForm.ShowReport("KhachHang.rpt"
                 , filter
